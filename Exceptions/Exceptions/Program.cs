@@ -28,6 +28,11 @@ namespace Exceptions
                     int pick = int.Parse(input);
                     string name = names[pick];
                     Console.WriteLine(name);
+
+                    //This throws your own created exception 
+                    //BUT throw tends to not to be often 
+                    //since C# has SO many built in exceptions that most cases are well covered
+                   // throw new Exception("Something didint work");
                     break;
                 }
                 //The catch kicks in if the exception is thrown 
