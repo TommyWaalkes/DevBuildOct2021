@@ -12,8 +12,10 @@ namespace ToDoList
             TaskDb.PrintToDos();
             // TaskDb.AddToDo("Reogranize Code", "We need to clean up the code in our toDo list lab");
             //TaskDb.RemoveToDo(10);
-            TaskDb.SetComplete(-10);
-            TaskDb.PrintToDos();
+            TaskDb.SetComplete(1);
+
+            TaskDb.DisplayCompleted(true);
+            //TaskDb.PrintToDos();
 
         }
     }

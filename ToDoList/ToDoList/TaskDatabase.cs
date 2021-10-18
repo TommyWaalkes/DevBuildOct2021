@@ -65,6 +65,44 @@ namespace ToDoList
             //ToDos.RemoveAll(object)
         }
 
+        //1) Pass in the index we wish to update 
+        //2) Grab the object at that index from our list 
+        //3) Ask the user what they would like to change 
+        //4) Change the object 
+        //5) Store the updated at the same index in the list 
+
+        public void UpdateToDo(int index)
+        {
+            //This pulls out the object at that index 
+            //TD is a copy but NOT a reference, meaning changes to TD 
+            //Don't show up in the list
+            ToDo td = ToDos[index];
+            Console.WriteLine("What would you like to change about this object: ");
+            Console.WriteLine($"Current Name: {td.Name}");
+            Console.WriteLine($"Current Description: {td.Description}");
+
+            string input = GetUserInput("Would you like to change either the name or the description (des)?");
+
+            if(input == "name")
+            {
+                Console.WriteLine("What would you like the new task name to be?");
+                string newName = Console.ReadLine();
+
+                //This will override what value for name is in the TD object 
+                td.Name = newName;
+            }
+            else if(input == "des"||input=="description")
+            {
+                Console.WriteLine("Type in the new description for the TO DO item");
+                string newDes = Console.ReadLine();
+
+                td.Description = newDes;
+            }
+
+            //Next we need to override the old object in the list 
+            ToDos[index] = td;
+        }
+
         public void SetComplete(int index)
         {
             try
@@ -78,6 +116,40 @@ namespace ToDoList
             {
                 Console.WriteLine($"{index} was not a valid index");
                 Console.WriteLine($"Please input an index between 0 and {ToDos.Count - 1}");
+            }
+        }
+
+        public void DisplayCompleted(bool completed)
+        {
+            if (completed)
+            {
+                Console.WriteLine("Completed Tasks: ");
+            }
+            else
+            {
+                Console.WriteLine("Uncompleted Tasks: ");
+            }
+            for(int i = 0; i < ToDos.Count; i++)
+            {
+                ToDo td = ToDos[i];
+                if (completed == td.IsCompleted)
+                {
+                    Console.WriteLine(td.Name);
+                }
+            }
+        }
+
+        public void SearchListByDescription(string searchTerm)
+        {
+            for(int i = 0; i < ToDos.Count; i++)
+            {
+                ToDo t = ToDos[i];
+                if(t.Description.Contains(searchTerm, StringComparison.OrdinalIgnoreCase))
+                {
+                    Console.WriteLine("Name: "+t.Name);
+                    Console.WriteLine("Description: "+ t.Description);
+                    Console.WriteLine();
+                }
             }
         }
 
