@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Blockbuster
 {
@@ -8,15 +9,22 @@ namespace Blockbuster
         {
             Movie m = new Movie("Shrek", Genre.Comedy, 105, "Get out of my swamp", "Donkey shows up", "They visit the dragon");
             // m.PrintInfo();
-            Console.WriteLine(m);
-            m.PrintScenes();
-
+          //  Console.WriteLine(m);
+          //  m.PrintScenes();
+            Console.WriteLine();
             VHS d = new VHS("Tommy Boy", Genre.Comedy, 120, "He flunks college", "He sells stuff", "David spade is sarcastic");
+            d.PrintInfo();
+            Console.WriteLine();
+            Blockbuster store = new Blockbuster();
 
-            while (true)
+            List<Movie> results = store.SearchByGenres(Genre.Drama);
+
+            foreach(Movie result in results)
             {
-                d.Play();
+                result.PrintInfo();
             }
+
+            //store.GetMovie(4);
         }
     }
 }

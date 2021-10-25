@@ -40,5 +40,14 @@ namespace Blockbuster
                 Rewind();
             }
         }
+
+        public override void PrintInfo()
+        {
+            //We want the parents version 
+            //but we want also want to print the property unique to VHS 
+            base.PrintInfo();
+            Console.WriteLine($"Current Time: {CurrentTime}");
+
+        }
     }
 }
