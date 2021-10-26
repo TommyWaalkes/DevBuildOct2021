@@ -21,9 +21,10 @@ namespace AnimalAbstract
         //We will use this list to check if the animal is allowed to eat a particular food
         public List<FoodType> EdibleFoods { get; set; } = new List<FoodType>();
 
-        public bool EatenEnough => NeededCalories >= CurrentCalories;
+        //We're making this virtual so we can override in chimp
+        public virtual bool EatenEnough => NeededCalories <= CurrentCalories;
 
-        public Animal(int NeedCalories, params FoodType[] EdibleFoods)
+        public Animal(int NeededCalories, params FoodType[] EdibleFoods)
         {
             this.NeededCalories = NeededCalories;
             this.EdibleFoods = EdibleFoods.ToList(); 
