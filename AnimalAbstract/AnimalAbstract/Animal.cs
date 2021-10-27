@@ -13,6 +13,7 @@ namespace AnimalAbstract
     //as well as the calories of that food. 
     abstract class Animal
     {
+        public int MeatCalories { get; set; }
         public int NeededCalories { get; set; }
         
         //Assume its the start of the day, the animal hasnt eaten yet 

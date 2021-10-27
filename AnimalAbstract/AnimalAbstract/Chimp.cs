@@ -6,7 +6,8 @@ namespace AnimalAbstract
 {
     class Chimp : Animal
     {
-        public int MeatCalories { get; set; } = 0;
+        //The warning here is saying this is redundant since the parent already has it
+        //public int MeatCalories { get; set; } = 0;
         public override bool EatenEnough => (CurrentCalories>= NeededCalories) && (MeatCalories >=200);
         public Chimp() : base(1000, FoodType.Meat, FoodType.Plants)
         {
