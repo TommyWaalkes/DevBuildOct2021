@@ -9,6 +9,7 @@ namespace RPSLab
         public string Name { get; set; }
         public RPSEnum RPS { get; set; }
 
+        //This forces our children to make their own version of that method
         public abstract RPSEnum GetRPS();
     }
 }
