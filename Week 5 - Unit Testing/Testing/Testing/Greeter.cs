@@ -13,6 +13,8 @@ namespace Testing
 
         public string Greet(string name)
         {
+           
+            throw new Exception();
             //This line is weird
             if(name == "")
             {
