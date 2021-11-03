@@ -1,6 +1,3 @@
-C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\TDD\TDD\obj\Debug\netcoreapp3.1\TDD.AssemblyInfoInputs.cache
-C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\TDD\TDD\obj\Debug\netcoreapp3.1\TDD.AssemblyInfo.cs
-C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\TDD\TDD\obj\Debug\netcoreapp3.1\TDD.csproj.CoreCompileInputs.cache
 C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\TDD\TDD\bin\Debug\netcoreapp3.1\testhost.exe
 C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\TDD\TDD\bin\Debug\netcoreapp3.1\testhost.dll
 C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\TDD\TDD\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.PlatformAbstractions.dll
@@ -91,6 +88,9 @@ C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\TDD\TDD\bin\De
 C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\TDD\TDD\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\TDD\TDD\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\TDD\TDD\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\TDD\TDD\obj\Debug\netcoreapp3.1\TDD.AssemblyInfoInputs.cache
+C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\TDD\TDD\obj\Debug\netcoreapp3.1\TDD.AssemblyInfo.cs
+C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\TDD\TDD\obj\Debug\netcoreapp3.1\TDD.csproj.CoreCompileInputs.cache
 C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\TDD\TDD\obj\Debug\netcoreapp3.1\TDD.csproj.CopyComplete
 C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\TDD\TDD\obj\Debug\netcoreapp3.1\TDD.dll
 C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\TDD\TDD\obj\Debug\netcoreapp3.1\TDD.pdb
