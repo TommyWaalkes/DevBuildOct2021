@@ -1,0 +1,13 @@
+C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\StudyHall\StudyHall\bin\Debug\netcoreapp3.1\StudyHall.exe
+C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\StudyHall\StudyHall\bin\Debug\netcoreapp3.1\StudyHall.deps.json
+C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\StudyHall\StudyHall\bin\Debug\netcoreapp3.1\StudyHall.runtimeconfig.json
+C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\StudyHall\StudyHall\bin\Debug\netcoreapp3.1\StudyHall.runtimeconfig.dev.json
+C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\StudyHall\StudyHall\bin\Debug\netcoreapp3.1\StudyHall.dll
+C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\StudyHall\StudyHall\bin\Debug\netcoreapp3.1\StudyHall.pdb
+C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\StudyHall\StudyHall\obj\Debug\netcoreapp3.1\StudyHall.csprojAssemblyReference.cache
+C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\StudyHall\StudyHall\obj\Debug\netcoreapp3.1\StudyHall.AssemblyInfoInputs.cache
+C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\StudyHall\StudyHall\obj\Debug\netcoreapp3.1\StudyHall.AssemblyInfo.cs
+C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\StudyHall\StudyHall\obj\Debug\netcoreapp3.1\StudyHall.csproj.CoreCompileInputs.cache
+C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\StudyHall\StudyHall\obj\Debug\netcoreapp3.1\StudyHall.dll
+C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\StudyHall\StudyHall\obj\Debug\netcoreapp3.1\StudyHall.pdb
+C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 5 - Unit Testing\StudyHall\StudyHall\obj\Debug\netcoreapp3.1\StudyHall.genruntimeconfig.cache
