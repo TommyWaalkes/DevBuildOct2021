@@ -1,0 +1,46 @@
+p{
+    color:orange;
+    font-family: "Arial";
+}
+
+body{
+    background-image: url('LinedPaper.jpg');
+    background-size: cover;
+}
+
+/*this class will center a non text element, 
+you may need to set a width since by default many 
+elements take up the full width of the page (or parent element)
+This is a good example of a class, it is very reuseable
+*/
+.centerElement{
+    margin-right: auto;
+    margin-left:auto;
+    display: block;
+}
+
+/*This is meant to only be used once per page, 
+and exists for the top text of the index*/
+#HomePageHeader{
+    font-family: 'comic-sans';
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    border: 5px solid black;
+    margin-top: 0px;
+    background-color: gray;
+}
+
+#StickyHeader{
+    position: fixed;
+    left: 20%;
+    right: 20%;
+    top: 0;
+}
+
+img{
+    border-bottom: 4px dashed gray;
+    border: 3px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
