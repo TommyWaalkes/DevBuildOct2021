@@ -1,0 +1,28 @@
+﻿<!--Any time in CSHTML you see an at symbol, that is server-side markup
+    Server side markup get processed before the HTML is sent to the user 
+    and comes in many different forms
+
+    Server Side Markup comes in many forms so its hard to define, 
+    but it helps you style your page, pull data in/out of a view, display data, 
+    talk to databases, and much much more
+
+    In particular, there's a subset of markup called Razor, 
+    which allows you to use C# syntax in your view. 
+    Most commonly razor is used to iterate through lists/arrays and to print data into the view
+    with Razor all C# features are there BUT scope only exists in that view, 
+    nothing will persist once you move away from the view
+
+    With pure .Net Razor is useful, with Angular/.Net Razor isn't need since most functions are handled by angular 
+    -->
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<h2>Hello World!!!</h2>
+<p>I'm making a web page it is neat!!!</p>
