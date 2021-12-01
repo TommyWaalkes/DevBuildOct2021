@@ -1,0 +1,20 @@
+﻿<h2>User Input Form</h2>
+
+<!--When submit is clicked on our form it will go to the controller and try to and call an action named Result-->
+<form action="Result">
+    <p>First Name</p>
+
+    <!--If the name of an input matches the name of a property .Net will map them together automatically in the controller-->
+    <input type="text" name="FirstName" />
+
+    <p>Last Name</p>
+    <input type="text" name="LastName"/>
+
+    <p>Age</p>
+    <input type="number" name="Age"/>
+
+    <p>Email</p>
+    <input type="email" name="Email"/>
+
+    <input type="submit"/>
+</form>

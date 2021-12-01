@@ -35,3 +35,5 @@ C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 9 - Front End\IntroNet\IntroNet
 C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 9 - Front End\IntroNet\IntroNet\obj\Debug\netcoreapp3.1\IntroNet.genruntimeconfig.cache
 C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 9 - Front End\IntroNet\IntroNet\obj\Debug\netcoreapp3.1\IntroNet.csproj.CopyComplete
 C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 9 - Front End\IntroNet\IntroNet\obj\Debug\netcoreapp3.1\IntroNet.csprojAssemblyReference.cache
+C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 9 - Front End\IntroNet\IntroNet\obj\Debug\netcoreapp3.1\Razor\Views\Home\UserForm.cshtml.g.cs
+C:\Users\Tommy\Desktop\Dev Build Class Repo\Week 9 - Front End\IntroNet\IntroNet\obj\Debug\netcoreapp3.1\Razor\Views\Home\Result.cshtml.g.cs

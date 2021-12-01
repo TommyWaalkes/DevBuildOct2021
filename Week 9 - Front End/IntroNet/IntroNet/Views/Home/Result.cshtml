@@ -1,0 +1,13 @@
+﻿
+<!--The at model tells .net that this view must have a user model to function. 
+    If we want to reference that model we need to Model with the capital
+
+    model imports the model 
+    Model references the imported model
+    -->
+@model User
+
+<p>First Name: @Model.FirstName</p>
+<p>Last Name: @Model.LastName</p>
+<p>Age: @Model.Age</p>
+<p>Email: @Model.Email</p>

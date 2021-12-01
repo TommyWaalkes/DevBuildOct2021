@@ -43,6 +43,29 @@ namespace IntroNet.Controllers
             return View();
         }
 
+        //I want to 2 new actions: 
+        //1) will be a form to allow the user to fill in data for a user model 
+        //2) will take in a user model, automatically made from the form, and display its info
+        //With step 2 there's some of what I like to call .Net magic, where it will handle thing automatically 
+
+        public IActionResult UserForm()
+        {
+            //Nothing special needs to be in this action, 
+            //we just need to display the view. 
+            return View();
+        }
+
+        //The user u represents the form data we just collected 
+        //We will pass it down to a view and have that view display that info 
+        //Later we will learn to how to store and manipulate that user in a database
+        public IActionResult Result(User u)
+        {
+            //We pass the user model to the view so the view can display the user's info.
+            return View(u);
+        }
+
+
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
