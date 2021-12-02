@@ -1,0 +1,23 @@
+﻿<h2>Calculator</h2>
+
+<form action="Result">
+    <!--Make sure you give each form input a name, which is how it will be passed to .Net
+        (or really whatever language you're working in)-->
+
+    <input type="text" maxlength="10" />
+
+    <p>Num 1:</p>
+    <input type="number" name="Num1" required />
+
+    <p>Num 2:</p>
+    <input type="number" name="Num2" required />
+
+    <select name="Operation">
+        <option value="plus">Plus</option>
+        <option value="minus">Minus</option>
+        <option value="multipy">Multiply</option>
+        <option value="divide">Divide</option>
+    </select>
+
+    <input type="submit"/>
+</form>
