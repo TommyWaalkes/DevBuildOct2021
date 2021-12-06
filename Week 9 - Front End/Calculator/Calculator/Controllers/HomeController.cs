@@ -29,12 +29,12 @@ namespace Calculator.Controllers
 
         public IActionResult Result(Calc c)
         {
-            string name = "tommy";
+            //string name = "tommy";
+            ////You can use C# in controllers to validate 
+            //if(name.Length == 50)
+            //{
 
-            if(name.Length == 50)
-            {
-
-            }
+            //}
             double result = 0; 
             if(c.Operation == Operation.plus)
             {
