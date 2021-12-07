@@ -1,0 +1,89 @@
+Turn off safe mode: 
+SET SQL_SAFE_UPDATES=0;
+
+1) Select * from customers; 
+2) select distinct countries from customers; -- distinct selects only which countries show up, not duplicates
+3) select * from customers 
+   where customerId like 'bl%'; 
+4) select * from customers limit 100;
+OR 
+ SELECT TOP 100 * FROM Orders;
+5) select * from customers 
+where PostalCode = 1010 
+OR PostalCode = 3012 
+OR PostalCode = 12209 
+OR PostalCode = 05023;
+
+OR 
+
+Select* From Customers 
+Where PostalCodes = (1010, 3012, 12209, 05023);
+
+6) select * from orders 
+   where shipregion is not null; 
+
+or 
+
+   select * from Customers 
+   where shipregion != 'null'; 
+
+
+7) select * from customers 
+   orderby country asc, city asc;
+
+8) insert into customers  
+   values( "CAT1","S.Capone Co", "Stone Capone", "CEO", "Sunset Ave", "Purrr", "CA", "0707", "Japan", "(26) 555-5555", "(26) 555-5551");
+
+9) update orders 
+   set shipregion = 'Eurozone' 
+   where ShipCountry = 'France'; 
+
+10) delete from `order details` 
+    where quantity = 1; 
+
+11) SELECT MIN(Quantity), MAX(Quantity),AVG(Quantity) FROM `order details`;
+
+12)  SELECT MIN(Quantity), MAX(Quantity),AVG(Quantity) 
+ FROM `order details`
+ group by OrderID;
+
+13) select CustomerID 
+from orders 
+where OrderID=10290;
+
+14) Inner Join
+SELECT Orders.OrderID, Customers.ContactName 
+FROM Orders 
+INNER JOIN Customers 
+ON Orders.CustomerID = Customers.CustomerID;
+
+Full Join 
+SELECT Orders.OrderID, Customers.ContactName
+FROM Orders 
+RIGHT JOIN Customers 
+ON Orders.CustomerID = Customers.CustomerID
+UNION
+SELECT Orders.OrderID, Customers.ContactName
+FROM Orders 
+LEFT JOIN Customers 
+ON Orders.CustomerID = Customers.CustomerID;
+
+Left Join
+SELECT Orders.OrderID, Customers.ContactName
+FROM Orders 
+LEFT JOIN Customers 
+ON Orders.CustomerID = Customers.CustomerID;
+
+Right Join 
+SELECT Orders.OrderID, Customers.ContactName
+FROM Orders 
+RIGHT JOIN Customers 
+ON Orders.CustomerID = Customers.CustomerID;
+
+15) select firstname from employees
+where ReportsTo = null; 
+select firstname from employees
+where ReportsTo is null; 
+
+16) select firstname from employees
+where ReportsTo = 'Andrew'; 

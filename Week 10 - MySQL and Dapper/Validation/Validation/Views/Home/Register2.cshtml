@@ -1,5 +1,12 @@
-﻿@model Validation.Models.Movie
+﻿@model Movie
 
+<p>To setup data annotations on a form you need 2 things: </p>
+<ul>
+    <li>To import the desired model at the top of the page</li>
+    <li>You need to import the built Javascript Validation file, which comes with .Net </li>
+</ul>
+
+<p>Once those imports we need to create our forms, based upon our model. So we can use asp-for to reference each property in our model</p>
 <p asp-validation-summary="ModelOnly" class="text-danger"></p>
 
 <form action="Register2" method="post">
@@ -17,6 +24,8 @@
 
 
     <label asp-for="Genre" class="control-label"></label>
+    
+    <!--You still have access to all of your usual HTML elements with data annotations-->
     <select asp-for="Genre">
         <option value="Horror">Horror</option>
         <option value="Comedy">Comedy</option>
