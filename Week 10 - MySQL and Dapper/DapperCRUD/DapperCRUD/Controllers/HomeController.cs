@@ -55,6 +55,34 @@ namespace DapperCRUD.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        //We're making a new model so we just need to display the view
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        //This is where we process form input for our create form 
+        [HttpPost]
+        public IActionResult Create(Movie m)
+        {
+            m.Year = 1700;
+            //ModelState Is Valid checks the model against its data annotations 
+            //It returns if all rules are met
+            //It returns if any rule is violated 
+
+            if (ModelState.IsValid)
+            {
+                //If the model is good we will pass it to our DB and jump back to the index
+                MovieDB.CreateMovie(m);
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                //If the model is bad we will return to the same page 
+                return View(m);
+            }
+        }
+
         public IActionResult Privacy()
         {
             return View();

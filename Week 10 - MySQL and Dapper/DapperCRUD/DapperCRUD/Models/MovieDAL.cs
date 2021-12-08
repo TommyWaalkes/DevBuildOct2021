@@ -64,8 +64,20 @@ namespace DapperCRUD.Models
             using (var connect = new MySqlConnection(Secret.Connection))
             {
                 string sql = "update movies " +
-                    $"set title={m.Title}, genre={m.Genre}, `year`={m.Year}, runtime={m.RunTime}" +
+                    $"set title='{m.Title}', genre='{m.Genre}', `year`={m.Year}, runtime={m.RunTime} " +
                     $"where id={m.Id}";
+                connect.Open();
+                connect.Query<Movie>(sql);
+                connect.Close();
+            }
+        }
+
+        public void CreateMovie(Movie m)
+        {
+            using (var connect = new MySqlConnection(Secret.Connection))
+            {
+                string sql = "insert into movies " +
+                    $"values(0, '{m.Title}', '{m.Genre}', {m.Year}, {m.RunTime} )";
                 connect.Open();
                 connect.Query<Movie>(sql);
                 connect.Close();
