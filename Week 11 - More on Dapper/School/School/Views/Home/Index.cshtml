@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Student>
+
+@foreach(Student s in Model)
+            {
+                <div style="border: 2px solid black">
+                    <p>Id: @s.Id</p>
+                    <p>Name: @s.fullName</p>
+                    <p>Age: @s.Age</p>
+                    <a asp-action="Delete" asp-controller="Home" asp-route-id="@s.Id"><p>Delete this entry</p></a>
+                    <a asp-action="Update" asp-controller="Home" asp-route-id="@s.Id"><p>Increase Age (Update)</p></a>
+                </div>
+            }
+
+<a asp-action="Create" asp-controller="Home">
+    <p>Create New Student</p>
+</a>
+
+<form action="Delete">
+    <input name="id"/>
+    <input type="submit"/>
+</form>
+
+<a asp-action="Create" asp-controller="Home">
+<button >
+    Create new Entry
+</button>
+</a>
