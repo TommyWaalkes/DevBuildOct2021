@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Teacher>
+
+<h2>Teacher Look up</h2>
+
+<form asp-controller="School" asp-action="Teacher">
+    <select name="id">
+        @foreach(Teacher t in Model)
+            {
+                <option value="@t.Id">@t.Name</option>
+            }
+    </select>
+    <input type="submit" value="Look Up Teacher"/>
+</form>

@@ -1,0 +1,14 @@
+﻿@model Teacher
+<h2>@Model.Name</h2>
+<p>Starting Year: @Model.StartingYear</p>
+<p>Teacher Id: @Model.Id</p>
+
+<div>
+    @foreach(Student s in Model.Students)
+            {
+                <p>Name: @s.FullName</p>
+                <p>Favorite Subject: @s.FavoriteSubject</p>
+                <p>GPA: @s.GPA</p>
+                <p>Age: @s.Age</p>
+            }
+</div>

@@ -1,0 +1,8 @@
+﻿@model StudentTeacherViewModel
+<p>@Model.Teacher.Name's students</p>
+
+@foreach(Student s in Model.Teacher.Students)
+            {
+                <p>Name: @s.FullName</p>
+              
+            }
