@@ -1,0 +1,10 @@
+﻿@model IEnumerable<TeacherSubject>
+
+@foreach(TeacherSubject ts in Model)
+            {
+                <div style="border: 5px solid black">
+                    <p>Id: @ts.Id</p>
+                    <p>@ts.Teacher.Name teaches @ts.Subject.SubjectName</p>
+                    <br/>
+                </div>
+            }

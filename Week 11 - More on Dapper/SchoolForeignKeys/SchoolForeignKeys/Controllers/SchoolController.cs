@@ -21,5 +21,11 @@ namespace SchoolForeignKeys.Controllers
             Teacher t = db.GetTeacher(id);
             return View(t);
         }
+
+        public IActionResult TeacherSubjects()
+        {
+            List<TeacherSubject> teacherSubjects = db.GetTeacherSubjects();
+            return View(teacherSubjects);
+        }
     }
 }
