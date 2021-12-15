@@ -1,0 +1,27 @@
+-- CREATE DATABASE ToDo; 
+-- CREATE table Employee(
+-- 	Id int Primary Key auto_increment not null, 
+--     `Name` nvarchar(30),
+--     HoursAvailible float, 
+--     Title nvarchar(40)
+-- );
+
+-- CREATE TABLE ToDo(
+-- 	Id int Primary Key auto_increment not null, 
+-- 	`Name` nvarchar(30),
+--     HoursNeeded float,
+--     IsCompleted bool
+-- );
+-- this is a many to many table 
+-- with many to many all tasks may be tackled by any number employees and vice versa 
+-- one to many, one task has many employee, but each employee may have only 1 task 
+-- CREATE TABLE Assignments(
+-- 	Id int Primary Key auto_increment not null, 
+--     EmployeeId int, 
+--     ToDoId int,
+--     foreign key (EmployeeId) References Employee(Id),
+--     foreign key (ToDoId) references ToDo(Id));
+
+-- insert into employee 
+-- values(0, 'Sleezy Pete', 20, 'President of Acquisition'),
+-- (0, 'Hank Hill', 10, 'Propane Salesman');

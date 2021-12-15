@@ -9,17 +9,18 @@ namespace ToDoApp.Controllers
 {
     public class EmployeeController : Controller
     {
-        EmployeeDAL db = new EmployeeDAL();
+        EmployeeDAL dbEmployee = new EmployeeDAL();
+        ToDoDAL dbToDo = new ToDoDAL();
 
         public IActionResult Index()
         {
-            List<Employee> employees = db.GetEmployees();
-            return View(employees);
+            EmployeeTaskViewModel etvm = new EmployeeTaskViewModel();
+            return View(etvm);
         }
 
         public IActionResult Details(int id)
         {
-            Employee e = db.GetEmployee(id);
+            Employee e = dbEmployee.GetEmployee(id);
             return View(e);
         }
 
@@ -29,7 +30,7 @@ namespace ToDoApp.Controllers
             e.Name = "Cotton Hill";
             e.Title = "Retired Vet";
             e.HoursAvailible = 30;
-            db.AddEmployee(e);
+            dbEmployee.AddEmployee(e);
             return RedirectToAction("Index");
         }
     }
