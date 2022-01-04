@@ -1,0 +1,9 @@
+﻿@model SearchParent
+<p>Results Count: @Model.totalResults</p>
+@foreach(Search s in Model.Search)
+            {
+                <p>------------------</p>
+                <p>Title: @s.Title</p>
+                <p>Type: @s.Type</p>
+                <img src="@s.Poster"/>
+            }

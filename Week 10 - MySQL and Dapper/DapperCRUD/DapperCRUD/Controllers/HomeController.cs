@@ -55,6 +55,19 @@ namespace DapperCRUD.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        public IActionResult Edit2(int id)
+        {
+            Movie m = MovieDB.GetMovie(id);
+            return View(m);
+        }
+
+        [HttpPost]
+        public IActionResult Edit2(Movie m)
+        {
+            MovieDB.UpdateMovie(m);
+            return RedirectToAction("Index", "Home");
+        }
+
         //We're making a new model so we just need to display the view
         public IActionResult Create()
         {

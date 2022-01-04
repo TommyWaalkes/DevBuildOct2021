@@ -26,9 +26,27 @@
     <label asp-for="Genre" class="control-label"></label>
     <input asp-for="Genre" class="form-control" value="@Model.Genre" />
     <span asp-validation-for="Genre" class="text-danger"></span>
-    <!--You still have access to all of your usual HTML elements with data annotations-->
+    You still have access to all of your usual HTML elements with data annotations
 
     <input type="submit" />
+</form>
+<p>----------------------------</p>
+
+<h2>Edit Non-Data-Annotations</h2>
+<form asp-action="Edit" method="post">
+    <p>Year</p>
+    <input name="Year"/>
+
+    <p>Run Time</p>
+    <input name="RunTime"/>
+
+    <p>Genre</p>
+    <input name="Genre"/>
+
+    <p>Title</p>
+    <input name="Title"/>
+
+    <input type="submit"/>
 </form>
 
 
