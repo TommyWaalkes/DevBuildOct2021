@@ -19,9 +19,14 @@ namespace SWAPIExample.Controllers
             PersonPlanetViewModel ppvm = new PersonPlanetViewModel();
             ppvm.Person = SWAPI.GetPerson(80);
             ppvm.Planet = SWAPI.GetPlanet(1);
-            return View("index", ppvm);
-            string outputDAL = "";
-          
+            return View("index", ppvm);          
+        }
+
+        public IActionResult People()
+        {
+            PeopleSearchResults psr = new PeopleSearchResults();
+            psr = SWAPI.GetPeople(1);
+            return View(psr);
         }
 
         public IActionResult Privacy()
