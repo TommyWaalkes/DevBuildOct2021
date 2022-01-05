@@ -1,0 +1,11 @@
+﻿@model Draw
+<p>Remaining Cards: @Model.remaining</p> 
+<p>Cards Drawn: @Model.cards.Length</p>
+
+@foreach(Card c in Model.cards)
+            {
+                <p>------------------------</p>
+                <p>@c.suit</p>
+                <p>@c.value</p>
+                <img src="@c.image"/>
+            }

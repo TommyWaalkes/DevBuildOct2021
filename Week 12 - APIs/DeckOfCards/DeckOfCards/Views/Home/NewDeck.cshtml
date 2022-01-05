@@ -1,0 +1,12 @@
+﻿@model Deck
+
+<p>Deck ID: @Model.deck_id</p>
+<p>Shuffled: @Model.shuffled</p>
+<p>Remaining: @Model.remaining</p>
+
+<form asp-action="DrawCards">
+    <p>Number of Cards to draw:</p>
+    <input type="number" name="DrawCount"/>
+    <input type="hidden" name="DeckId" value="@Model.deck_id"/>
+    <input type="submit"/>
+</form>
