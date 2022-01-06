@@ -38,5 +38,38 @@ namespace CatsAPIDapper.Controllers
             catDb.DeleteCat(id);
             return $"Cat at id {id} has been deleted";
         }
+
+        [HttpGet("GetCat/{id}")]
+        public Cat GetCat(int id)
+        {
+            Cat c = catDb.GetCat(id);
+            return c;
+        }
+
+        [HttpPut("UpdateCat/{id}")]
+        public string UpdateCat(int id, Cat updatedCat)
+        {
+            //We want our to be able to select which properies they wish to change and leave the rest alone 
+            //This will make it so that for properties we wish to leave alone, we don't have to renter their values
+            Cat oldCat = catDb.GetCat(id);
+
+            //check our updated cat for change properties
+            if(updatedCat.fName == null)
+            {
+                updatedCat.fName = oldCat.fName;
+            }
+
+            if(updatedCat.Age == 0)
+            {
+                updatedCat.Age = oldCat.Age;
+            }
+
+            catDb.UpdateCat(id, updatedCat);
+            return $"{updatedCat.fName} at id {id} has been updated";
+            //if(updatedCat.IsDeclawed == true)
+            //{
+
+            //}
+        }
     }
 }
