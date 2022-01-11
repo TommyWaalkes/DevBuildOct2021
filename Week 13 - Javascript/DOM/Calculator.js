@@ -22,6 +22,15 @@ function RunCalculator() {
     if (checkedInput.value === "plus") {
         result = num1 + num2;
     }
+    else if (checkedInput.value === "minus") {
+        result = num1 - num2;
+    }
+    else if (checkedInput.value === "multiply") {
+        result = num1 * num2;
+    }
+    else {
+        result = num1 / num2;
+    }
 
     document.getElementById("Result").innerText = result;
 }
