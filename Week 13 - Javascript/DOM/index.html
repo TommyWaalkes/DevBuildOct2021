@@ -1,0 +1,41 @@
+<html>
+
+<body>
+    <script src="Country.ts"></script>
+    <script src="Hello.js"></script>
+    <script src="Calculator.js"></script>
+    <button onclick="AddHello()">Add Hello</button>
+    <div id="Output"></div>
+
+    <form onsubmit="RunCalculator()">
+        <p>Number 1</p>
+        <input type="number" id="num1" />
+
+        <p>Number 2</p>
+        <input type="number" id="num2" />
+
+        <div id="operation">
+            <p>Plus</p>
+            <input name="operation" type="radio" value="plus" />
+
+            <p>Minus</p>
+            <input name="operation" type="radio" value="minus" />
+
+            <p>Multiply</p>
+            <input name="operation" type="radio" value="multiply" />
+
+            <p>Divide</p>
+            <input name="operation" type="radio" value="divides" />
+        </div>
+        <!--Form submission automatically refreshes or redirects -->
+        <!--BUT we want to stay on the same to see our result-->
+    </form>
+
+    <button onclick="RunCalculator()">Do Math!</button>
+
+    <div id="Result">
+
+    </div>
+</body>
+
+</html>
