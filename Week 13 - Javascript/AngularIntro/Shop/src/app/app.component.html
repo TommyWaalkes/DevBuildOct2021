@@ -1,0 +1,20 @@
+<h2>Hello World</h2>
+
+<p>{{title}}</p>
+
+<p>{{message}}</p>
+
+<h2>Customer Name: {{customer.name}}</h2>
+<p>Current Funds: {{customer.currentFunds}}</p>
+<p>Home State: {{customer.homeState}}</p>
+<p>Has Credit Card: {{customer.hasCreditCard}}</p>
+
+<p>Prices: {{prices}}</p>
+
+<!-- Directive are Angular's helper in html, there are many directive in anuglar
+but in general they allow us to style and arrange our HTML page -->
+
+<!--ng for of is like a foreach loop in other languages,-->
+<div *ngFor="let price of prices; index as i">
+  <p>{{i}} : ${{price}}</p>
+</div>

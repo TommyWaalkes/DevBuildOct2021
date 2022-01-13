@@ -1,0 +1,18 @@
+﻿@model List<Character>
+
+<table>
+    <tr>
+       <th>Name</th>
+        <th>Gender</th>
+        <th>Played By</th>
+    </tr>
+    @foreach(Character c in Model)
+            {
+                <tr>
+                    <td>@c.name</td>
+                    <td>@c.gender</td>
+                    <td>@c.playedBy[0]</td>
+                </tr>
+            }
+
+</table>
