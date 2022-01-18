@@ -1,0 +1,12 @@
+<!--the RouterLink Attribute is how we setup links 
+internally in an Angular app. -->
+<a routerLink="/example">
+  <p>example</p>
+</a>
+<a routerLink="/math">
+  <p>math</p>
+</a>
+<!--This is the target for render the different components 
+selected by our routing. EX when I select the math link above 
+it places the math component at the bottom-->
+<router-outlet></router-outlet>
