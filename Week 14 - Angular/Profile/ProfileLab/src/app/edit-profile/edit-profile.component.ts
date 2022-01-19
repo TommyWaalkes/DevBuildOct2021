@@ -15,5 +15,10 @@ export class EditProfileComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  UpdateUser(): void {
+    let name: string = (<HTMLInputElement>document.getElementById("Name")).value;
+    let contact: string = (<HTMLInputElement>document.getElementById("Contact")).value;
+    let bio: string = (<HTMLInputElement>document.getElementById("Bio")).value;
+    this.userService.setUser(name, contact, bio);
+  }
 }

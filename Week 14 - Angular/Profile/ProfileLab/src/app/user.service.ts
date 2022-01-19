@@ -17,5 +17,6 @@ export class UserService {
     this.User.name = name;
     this.User.contact = contact;
     this.User.bio = bio;
+    console.log(this.User);
   }
 }
