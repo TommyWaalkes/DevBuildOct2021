@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Convert } from './Movie';
+import { Convert, Movie } from './Movie';
 import { MovieService } from './movie.service';
 
 @Component({
@@ -10,12 +10,20 @@ import { MovieService } from './movie.service';
 })
 export class AppComponent {
   title = 'MovieApp';
+  movie?: Movie;
   constructor(private movieAPI: MovieService) { }
 
   GetMovie() {
     let title: string = (<HTMLInputElement>document.getElementById("Title")).value;
     this.movieAPI.SearchMovieByTitle(title).subscribe(
-      (result: any) => { console.log(result); Convert.toMovie(result); }
+      (result: any) => {
+        console.log(result);
+        //Take a JS 
+        let json: string = Convert.movieToJson(result);
+        let movie: Movie = Convert.toMovie(json);
+        console.log(movie);
+        this.movie = movie;
+      }
     );
   }
 }

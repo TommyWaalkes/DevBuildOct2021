@@ -2,3 +2,10 @@
 <input type="text" id="Title" />
 
 <button (click)="GetMovie()">Search</button>
+
+<div *ngIf="movie">
+  <p>Title: {{movie.Title}}</p>
+  <img src="{{movie.Poster}}" />
+  <p>Genre: {{movie.Genre}}</p>
+  <p>Actors: {{movie.Actors}}</p>
+</div>
