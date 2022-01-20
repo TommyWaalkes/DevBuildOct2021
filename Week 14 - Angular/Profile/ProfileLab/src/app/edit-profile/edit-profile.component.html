@@ -1,13 +1,20 @@
 <h2>Edit user profile</h2>
 
 <p>Name: </p>
-<input type="text" value="{{userToEdit.name}}" id="Name" />
+<input type="text" [(ngModel)]="userToEdit.name" id="Name" />
 
 <br />
 <p>Contact:</p>
-<input type="email" value="{{userToEdit.contact}}" id="Contact" />
+<input type="email" [(ngModel)]="userToEdit.contact" id="Contact" />
 <br />
 <p>Bio</p>
-<input type="text" value="{{userToEdit.bio}}" id="Bio" />
+<input type="text" [(ngModel)]="userToEdit.bio" id="Bio" />
+
+<p>Select Profile Pic</p>
+<div *ngFor="let pic of profilePics">
+    <input type="radio" name="profilePic" value="../assets/{{pic}}" class="imageSelection" />
+    <img src="../assets/{{pic}}" width="10%" height="auto" />
+
+</div>
 
 <button (click)="UpdateUser()">Save Changes</button>
