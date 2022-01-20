@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 body{
     font-family:sans-serif, arial;
+    background-color: #238ca1;
 }
 
 .centerElement{
@@ -9,10 +10,16 @@ body{
     display: block;
 }
 
-#MainBodyWidth{
+#MainBody{
     width: 35%;
+    /*pixels are a unit of measure for screen sizes
+    They are NOT a universal measurement, different OS/screens/browsers 
+    have differently sized pixels*/
+    padding: 12px;
+    background-color: #86cddb;
 }
 
 .blackBorder{
     border: 4px solid black;
+    border-radius: 20px;
 }
