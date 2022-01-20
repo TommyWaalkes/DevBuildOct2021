@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    font-family:sans-serif, arial;
+}
+
+.centerElement{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#MainBodyWidth{
+    width: 35%;
+}
+
+.blackBorder{
+    border: 4px solid black;
+}
