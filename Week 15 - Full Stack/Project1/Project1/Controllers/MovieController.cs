@@ -26,5 +26,11 @@ namespace Project1.Controllers
         {
             return db.GetMovie(id);
         }
+
+        [HttpPost("makeNew")]
+        public void PostMovie(Movie m)
+        {
+            db.InsertMovie(m);
+        }
     }
 }

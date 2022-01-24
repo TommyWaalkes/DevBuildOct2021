@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Convert, Movie } from '../Movie';
 import { MovieService } from '../movie.service';
 
 @Component({
@@ -9,11 +10,20 @@ import { MovieService } from '../movie.service';
 })
 export class MovieListComponent implements OnInit {
 
+  currentMovie?: Movie;
   constructor(private movieDAL: MovieService) { }
 
   ngOnInit() {
-    this.movieDAL.GetMovieList().subscribe(
-      (response: any) => { console.log(response); }
+    //subscribe attaches an observable and waits for it to finish calling the api 
+    //When the service is done running, subscribe will react by running the method 
+    //we pass into it. 
+    this.movieDAL.GetMovie(3).subscribe(
+      (response: any) => {
+        console.log(response);
+        let json = Convert.movieToJson(response);
+        this.currentMovie = Convert.toMovie(json);
+        console.log(this.currentMovie);
+      }
     );
   }
 

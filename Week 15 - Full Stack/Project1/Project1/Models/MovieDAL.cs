@@ -25,8 +25,29 @@ namespace Project1.Models
         public Movie GetMovie(int id)
         {
             List<Movie> output = GetMovies();
-            Movie match = output.Where(m => m.Id == id).First();
+            Movie match;
+            try
+            {
+                match = output.Where(m => m.Id == id).First();
+            }
+            catch (InvalidOperationException)
+            {
+                match = new Movie();
+                match.Title = $"Movie at index {id} does not exist, please try another id";
+            }
             return match;
+        }
+
+        public void InsertMovie(Movie m)
+        {
+            string sql = $"insert into movies values(0, '{m.Title}', '{m.Genre}', {m.Year}, {m.RunTime})";
+            using (var connect = new MySqlConnection(Secret.Connection))
+            {
+                connect.Open();
+                connect.Query<Movie>(sql);
+                connect.Close();
+            }
+
         }
     }
 }

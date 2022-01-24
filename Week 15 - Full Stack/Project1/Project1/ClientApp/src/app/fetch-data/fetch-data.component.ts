@@ -8,6 +8,9 @@ import { HttpClient } from '@angular/common/http';
 export class FetchDataComponent {
   public forecasts: WeatherForecast[];
 
+  //The reason you want to auto generate your url base is twofold:
+  //1) convenience - you never have to think about it
+  //2) inject will work regardless of whether your are local to your computer OR hosted on the internet
   constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
     http.get<WeatherForecast[]>(baseUrl + 'weatherforecast').subscribe(result => {
       this.forecasts = result;
