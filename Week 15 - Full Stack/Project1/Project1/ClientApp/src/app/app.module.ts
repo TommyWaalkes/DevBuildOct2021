@@ -12,6 +12,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { CreateMovieComponent } from './create-movie/create-movie.component';
 import { FullCRUDComponent } from './full-crud/full-crud.component';
+import { UpdateMovieComponent } from './update-movie/update-movie.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FullCRUDComponent } from './full-crud/full-crud.component';
     FetchDataComponent,
     MovieListComponent,
     CreateMovieComponent,
-    FullCRUDComponent
+    FullCRUDComponent,
+    UpdateMovieComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -34,7 +36,8 @@ import { FullCRUDComponent } from './full-crud/full-crud.component';
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'movie-list', component: MovieListComponent },
       { path: 'create-movie', component: CreateMovieComponent },
-      { path: 'crud', component: FullCRUDComponent }
+      { path: 'crud', component: FullCRUDComponent },
+      { path: 'update-movie', component: UpdateMovieComponent }
     ])
   ],
   providers: [],

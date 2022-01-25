@@ -5,6 +5,7 @@
     <p>Run Time: {{m.runTime}}</p>
     <p>Id: {{m.id}}</p>
     <button (click)="DeleteEntry(m.id, i)">Delete {{m.title}}</button>
+    <app-update-movie [Id]=m.id></app-update-movie>
 </div>
 <!--This creates a reference to another component, our create movie component
 in angular you are allowed to reuse and reference as many components as you want at once 
