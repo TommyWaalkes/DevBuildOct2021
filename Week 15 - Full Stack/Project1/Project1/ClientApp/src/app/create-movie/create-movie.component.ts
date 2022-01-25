@@ -27,7 +27,8 @@ export class CreateMovieComponent implements OnInit {
     let newMovie: Movie = { id: 0, title: title, year: year, runtime: runTime, genre: genre };
     //We will pass this model to the movie service
     this.movieService.CreateMovie(newMovie).subscribe(
-      //(response: any) => { console.log("It worked!") }
+      (response: any) => { location.reload() }
+
     );
   }
 }
