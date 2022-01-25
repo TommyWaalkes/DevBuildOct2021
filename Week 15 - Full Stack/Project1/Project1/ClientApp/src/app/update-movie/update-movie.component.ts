@@ -28,4 +28,21 @@ export class UpdateMovieComponent implements OnInit {
     );
   }
 
+  UpdateMovie() {
+    let title: string = (<HTMLInputElement>document.getElementById("Title" + this.Id)).value;
+    console.log(title);
+    let year: number = parseInt((<HTMLInputElement>document.getElementById("Year" + this.Id)).value);
+    console.log(year);
+    let runTime: number = parseInt((<HTMLInputElement>document.getElementById("RunTime" + this.Id)).value);
+    console.log(runTime);
+    let genre: string = (<HTMLInputElement>document.getElementById("Genre" + this.Id)).value;
+    console.log(genre);
+
+    let newMovie: Movie = { id: this.Id, title: title, year: year, runtime: runTime, genre: genre };
+
+    this.movieService.UpdateMovie(newMovie, this.Id).subscribe(
+      (response: any) => { location.reload() }
+    );
+  }
+
 }
