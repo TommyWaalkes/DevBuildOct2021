@@ -32,5 +32,38 @@ namespace Project1.Controllers
         {
             db.InsertMovie(m);
         }
+
+        [HttpDelete("delete/{id}")]
+        public void DeleteMovie(int id)
+        {
+            db.DeleteMovie(id);
+        }
+
+        [HttpPut("update/{id}")]
+        //The movie object will come from the body of the http call
+        public void UpdateMovie(int id, Movie m)
+        {
+            Movie original = db.GetMovie(id);
+            if(m.Title == null || m.Title == "")
+            {
+                m.Title = original.Title;
+            }
+
+            if(m.Genre == null || m.Genre == "")
+            {
+                m.Genre = original.Genre;
+            }
+
+            if(m.RunTime == 0)
+            {
+                m.RunTime = original.RunTime;
+            }
+
+            if(m.Year == 0)
+            {
+                m.Year = original.Year;
+            }
+            db.UpdateMovie(id, m);
+        }
     }
 }

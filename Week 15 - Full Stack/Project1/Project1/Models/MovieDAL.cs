@@ -49,5 +49,28 @@ namespace Project1.Models
             }
 
         }
+
+        public void DeleteMovie(int id)
+        {
+            string sql = $"delete from movies where id ={id}";
+            using (var connect = new MySqlConnection(Secret.Connection))
+            {
+                connect.Open();
+                connect.Query<Movie>(sql);
+                connect.Close();
+            }
+        }
+
+        public void UpdateMovie(int id, Movie newValues)
+        {
+            string sql = $"update movies set title='{newValues.Title}', genre='{newValues.Genre}', runtime={newValues.RunTime}, year={newValues.Year} where id={id}";
+            using (var connect = new MySqlConnection(Secret.Connection))
+            {
+                connect.Open();
+                connect.Query<Movie>(sql);
+                connect.Close();
+            }
+
+        }
     }
 }
