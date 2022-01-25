@@ -11,6 +11,7 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { CreateMovieComponent } from './create-movie/create-movie.component';
+import { FullCRUDComponent } from './full-crud/full-crud.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CreateMovieComponent } from './create-movie/create-movie.component';
     CounterComponent,
     FetchDataComponent,
     MovieListComponent,
-    CreateMovieComponent
+    CreateMovieComponent,
+    FullCRUDComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -31,7 +33,8 @@ import { CreateMovieComponent } from './create-movie/create-movie.component';
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'movie-list', component: MovieListComponent },
-      { path: 'create-movie', component: CreateMovieComponent }
+      { path: 'create-movie', component: CreateMovieComponent },
+      { path: 'crud', component: FullCRUDComponent }
     ])
   ],
   providers: [],

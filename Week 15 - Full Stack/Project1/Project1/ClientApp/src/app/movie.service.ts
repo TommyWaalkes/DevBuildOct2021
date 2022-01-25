@@ -30,4 +30,12 @@ export class MovieService {
     console.log(m);
     return this.http.post(this.url + "/makeNew/", m);
   }
+
+  DeleteMovie(id: number) {
+    return this.http.delete(this.url + "/delete/" + id);
+  }
+
+  UpdateMovie(newMovie: Movie, id: number) {
+    return this.http.put(this.url + "/update/" + id, newMovie);
+  }
 }
